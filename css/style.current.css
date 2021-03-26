@@ -106,6 +106,14 @@ nav img {
     background-color: #032039;
 }
 
+#navbarResponsive {
+    background-color: #032039;
+}
+
+#navbarResponsive a {
+    color: #fff;
+}
+
 .vbanner {
     position: relative;
     display: flex;
