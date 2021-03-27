@@ -1039,6 +1039,17 @@ footer a:hover {
     margin-bottom: -80px !important;
 }
 }
+@media only screen and (min-width: 990px) {
+    .bill_summary {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 70.66667%;
+        max-width: 70.666667%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 @media only screen and (max-width: 990px) {
     .card {
