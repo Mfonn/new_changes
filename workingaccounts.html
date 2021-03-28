@@ -23,10 +23,10 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="workingquicktrade.html">Quick Trade</a>
+                            <a class="nav-link active" href="quickTrade.html">Quick Trade</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="workingmarketplace.html">Marketplace</a>
+                            <a class="nav-link active" href="marketplace.html">Marketplace</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="account.html">My Account</a>
@@ -206,7 +206,8 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <h6 class="card-title my-1">My Accounts</h6>
-                            <div class="row small_box">
+                            <div class="col-lg-5 small_box">
+                            <div class="row">
                                 <div class="card text-center mt-3 ml-2" id="card" style="width: 15rem;">
                                     <div class="card-body">
                                         <a [routerLink]="['/wallet/history', wallet.ref]" class="yellow"><small class="card-text">Canadian Dollars (CAD)</small>
@@ -264,6 +265,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                             <div class="line my-3"></div>
                             <div class="card mb-5">
                                 <div class="card-body mt3 bgx">
@@ -470,8 +472,8 @@
                     <div class="col-lg-2 col-md-2 col-sm-2">
                         <h6>SwapFx</h6>
     
-                        <a href="workingmarketplace">Marketplace</a><br>
-                        <a href="workingquickTrade">Quick Trade</a><br>
+                        <a href="marketplace">Marketplace</a><br>
+                        <a href="quickTrade">Quick Trade</a><br>
                         <a href="home">My Account</a><br>
                         <a href="wallet">Funds</a><br>
                         <a href="login">Login</a><br>
