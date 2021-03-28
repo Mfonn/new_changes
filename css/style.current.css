@@ -1038,9 +1038,17 @@ footer a:hover {
   .swapfx-d {
     margin-bottom: -80px !important;
 }
+.cad {
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    flex: 0 0 80.666667% !important;
+    max-width: 80.666667% !important;
 }
+}
+
 @media only screen and (min-width: 990px) {
-    .small_box {
+    .bill_summary {
         -ms-flex: 0 0 41.666667%;
         flex: 0 0 70.66667%;
         max-width: 70.666667%;
@@ -1048,8 +1056,15 @@ footer a:hover {
         margin-left: auto;
         margin-right: auto;
     }
+  
+    .cad {
+        display:block;
+        margin-right: auto;
+        margin-left: auto;
+        flex: 0 0 80.666667% !important;
+        max-width: 80.666667% !important;
+    }
 }
-
 
 @media only screen and (max-width: 990px) {
     .card {
@@ -1103,7 +1118,16 @@ footer a:hover {
     margin-left: -40px;
     margin-right: -50px;
  }
+ .cad {
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    flex: 0 0 80.666667% !important;
+    max-width: 80.666667% !important;
 }
+ 
+}
+
 
 @media only screen and (max-width: 700px) {
     .ban {
@@ -1197,15 +1221,36 @@ footer a:hover {
 }
 .copyright {
     margin-top: 0px;
-}  
-@media only screen and (max-width: 500px) {
-    .small_box {
-        -ms-flex: 0 0 41.666667%;
-        flex: 0 0 70.66667%;
-        max-width: 70.666667%;
-        display: block;
-        margin-left: auto;
+} 
+
+@media only screen and (min-width: 650px) {
+    .cad {
+        display:block;
         margin-right: auto;
+        margin-left: auto;
+        flex: 0 0 80.666667% !important;
+        max-width: 990.666667% !important;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .cad {
+        display:block;
+        margin-right: auto;
+        margin-left: auto;
+        flex: 0 0 80.666667% !important;
+        max-width: 50.666667% !important;
     }
 
+}
+
+@media only screen and (max-width: 480px) {
+    .cad {
+        display:block;
+        margin-right: auto;
+        margin-left: auto;
+        flex: 0 0 80.666667% !important;
+        max-width: 80.666667% !important;
+    }
 }
