@@ -91,22 +91,79 @@
                             </div>
                         </div>
 
-                        <div class="collapse navbar-collapse " id="navbarResponsive ">
-                            <ul class="navbar-nav ml-auto ">
-                                <li class="nav-item ">
-                                    <a class="nav-link " href="dashboard.html ">Panel</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link " href="transactions.html ">My transactions</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link " href="my-details.html ">My Details</a>
-                                </li>
-                                <li class="nav-item pb-3 ">
-                                    <a class="nav-link " href="# ">Logout</a>
-                                </li>
-                            </ul>
-                        </div>
+                              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="workingquicktrade">Quick Trade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="workingmarketplace">Marketplace</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="ml-c2" href="marketplace">{{translator.headers.advanceTrade}}</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home">My Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="wallet">Funds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="wallet" class="ml-c2">Add Funds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="wallet/withdraw" class="ml-c2">Withdraw Funds</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="wallet/cards" class="ml-c2">{{translator.wallet.page.cards}}</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" data-toggle="modal" data-target="#getWalletField" class="ml-c2">Funds History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="orderHistory" class="ml-c2">Order History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="orderHistory/complete" class="ml-c2">Completed Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="orderHistory/active" class="ml-c2">Active Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="orderHistory/cancelled" class="ml-c2">Cancelled Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile/passwords" class="ml-c2">Passwords</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile/documents" class="ml-c2">Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile/accounts" class="ml-c2">Withdrawal Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="settings" class="ml-c2">Settings</a>
+                    </li>
+                    <li class="nav-item" *ngIf="auth == 0">
+                        <a class="nav-link" href="login">Login</a>
+                    </li>
+                    <li class="nav-item" *ngIf="auth == 0">
+                        <a class="nav-link" href="signup">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
                     </div>
 
                 </div>
@@ -600,7 +657,7 @@
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <h6 >SwapFx</h6>
-                                <a _ngcontent-uss-c28="" data-savepage-href="marketplace" href="https://lagos.swapsfx.com/marketplace">Marketplace</a><br _ngcontent-uss-c28=""><a _ngcontent-uss-c28="" data-savepage-href="quickTrade" href="https://lagos.swapsfx.com/quickTrade">Quick Trade</a>
+                                <a _ngcontent-uss-c28="" data-savepage-href="marketplace" href="workingmarketplace">Marketplace</a><br _ngcontent-uss-c28=""><a _ngcontent-uss-c28="" data-savepage-href="quickTrade" href="https://lagos.swapsfx.com/quickTrade">Quick Trade</a>
                                 <br
                                     _ngcontent-uss-c28=""><a _ngcontent-uss-c28="" data-savepage-href="home" href="https://lagos.swapsfx.com/home">My Accounts</a><br _ngcontent-uss-c28=""><a _ngcontent-uss-c28="" data-savepage-href="wallet" href="https://lagos.swapsfx.com/wallet">Funds</a>
                                     <br
