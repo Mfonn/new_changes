@@ -1198,3 +1198,14 @@ footer a:hover {
 .copyright {
     margin-top: 0px;
 }  
+@media only screen and (max-width: 500px) {
+    .small_box {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 70.66667%;
+        max-width: 70.666667%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
