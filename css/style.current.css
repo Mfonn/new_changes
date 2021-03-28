@@ -1040,7 +1040,7 @@ footer a:hover {
 }
 }
 @media only screen and (min-width: 990px) {
-    .bill_summary {
+    .small_box {
         -ms-flex: 0 0 41.666667%;
         flex: 0 0 70.66667%;
         max-width: 70.666667%;
