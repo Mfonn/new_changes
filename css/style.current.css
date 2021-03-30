@@ -84,7 +84,7 @@ nav img {
 
 .navbar-dark .navbar-nav .nav-link {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 400;
 }
 
@@ -258,8 +258,8 @@ p {
     transition-duration: 0.4s;
 }
 .btn:hover {
-    background-color: #d88a16 !important;
-    border: 2px solid #d88a16;
+    background-color: #b36e08 !important;
+    border: 2px solid #b36e08 !important;
 }
 
 .btn-link {
@@ -849,7 +849,7 @@ h5 {
 }
 
 .col-lg-12.m-auto {
-    padding: 1px;
+    padding: 20px;
 }
 
 footer {
@@ -1017,6 +1017,21 @@ footer a:hover {
     margin-left: auto;
     margin-right: auto;
   }
+  .add_funds {
+    flex: 100%;
+    max-width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.acctb {
+    flex: 100%;
+    max-width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
 
 
 
@@ -1037,13 +1052,8 @@ footer a:hover {
   }
   .swapfx-d {
     margin-bottom: -80px !important;
-}
-.cad {
-    display:block;
-    margin-right: auto;
-    margin-left: auto;
-    flex: 0 0 80.666667% !important;
-    max-width: 80.666667% !important;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 }
 
@@ -1051,22 +1061,27 @@ footer a:hover {
     .bill_summary {
         -ms-flex: 0 0 41.666667%;
         flex: 0 0 70.66667%;
-        max-width: 70.666667%;
+        max-width: 40.666667%;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-  
-    .cad {
-        display:block;
-        margin-right: auto;
-        margin-left: auto;
-        flex: 0 0 80.666667% !important;
-        max-width: 80.666667% !important;
+    .swapping {
+        flex: 0 0 66.666667%;
+        max-width: 55.666667%;
     }
+    .col-lg-12.m-auto {
+        flex: 0 0 100%;
+        max-width: 98%;
+        padding: 0px;
+    }
+
 }
 
 @media only screen and (max-width: 990px) {
+    body {
+        font-size: 10px;
+     }
     .card {
         font-size: 10px;
     }
@@ -1125,11 +1140,37 @@ footer a:hover {
     flex: 0 0 80.666667% !important;
     max-width: 80.666667% !important;
 }
+.bill_summary {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swapping {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
  
+}
+
+@media only screen and (max-width: 700px) {
+    .add_funds {
+        flex: 100%;
+        max-width: 90%;
+    }
+    .acctb {
+        flex: 100%;
+        max-width: 90%;
+    }
 }
 
 
 @media only screen and (max-width: 700px) {
+  
     .ban {
         height: 40vh;
     }
@@ -1223,27 +1264,29 @@ footer a:hover {
     margin-top: 0px;
 } 
 
+
+
 @media only screen and (min-width: 650px) {
     .cad {
         display:block;
         margin-right: auto;
         margin-left: auto;
-        flex: 0 0 80.666667% !important;
-        max-width: 990.666667% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
     }
+    
+   
 }
 
 
 @media only screen and (max-width: 650px) {
     .cad {
-        display:block;
-        margin-right: auto;
-        margin-left: auto;
-        flex: 0 0 80.666667% !important;
         max-width: 50.666667% !important;
     }
 
+  
 }
+
 
 @media only screen and (max-width: 480px) {
     .cad {
@@ -1252,5 +1295,7 @@ footer a:hover {
         margin-left: auto;
         flex: 0 0 80.666667% !important;
         max-width: 80.666667% !important;
+        font-size: 12px;
     }
+
 }
