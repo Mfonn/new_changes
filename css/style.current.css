@@ -567,6 +567,9 @@ p {
     background-color: #faa61a;
     border-color: #faa61a;
 }
+.table_market {
+    font-size: 12px !important;
+}
 
 
 .uline {
@@ -1055,6 +1058,9 @@ footer a:hover {
     margin-bottom: -80px !important;
     padding-left: 10px;
     padding-right: 10px;
+}
+.table_market {
+    font-size: 12px !important;
 }
 }
 
