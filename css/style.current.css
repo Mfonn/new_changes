@@ -559,7 +559,7 @@ p {
 
 .table td,
 .table th {
-    padding: 1.70rem !important;
+    padding: .70rem !important;
 }
 
 .table .thead-yellow th {
@@ -567,6 +567,7 @@ p {
     background-color: #faa61a;
     border-color: #faa61a;
 }
+
 
 .uline {
     border: 1px solid #f1f1f1;
@@ -1031,7 +1032,7 @@ footer a:hover {
     margin-left: auto;
     margin-right: auto;
 }
-}
+
 
 
 
@@ -1166,6 +1167,7 @@ footer a:hover {
         flex: 100%;
         max-width: 90%;
     }
+    
 }
 
 
@@ -1296,6 +1298,12 @@ footer a:hover {
         flex: 0 0 80.666667% !important;
         max-width: 80.666667% !important;
         font-size: 12px;
+    }
+    td a {
+        font-size: 10px;
+    }
+    ul.dtr-details {
+        font-size: 10px;
     }
 
 }
