@@ -602,10 +602,10 @@ td.sorting_1::before {
     border: 1px solid #f1f1f1;
 }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-    color: #333 !important;
+.page-link {
+    color: #333;
+    background-color: #fff;
     border: 1px solid transparent;
-    border-radius: 2px;
 }
 .page-item.active .page-link {
     z-index: 3;
