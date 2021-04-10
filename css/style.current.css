@@ -601,7 +601,15 @@ td.sorting_1::before {
 .uline {
     border: 1px solid #f1f1f1;
 }
-
+.page-item.active .page-link {
+    z-index: 3;
+    color: #333 !important;
+    background-color: #dddada;
+    border: 1px solid #979797;
+}
+.page-item.active .page-link:hover {
+    background-color: #ffffff;
+}
 .subnav {
     background-color: #071c35;
     color: #fff;
