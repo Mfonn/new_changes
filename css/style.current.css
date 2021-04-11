@@ -642,6 +642,7 @@ td.sorting_1::before {
 
 .ml-auto, .mx-auto {
     margin-left: auto !important;
+    margin-top: 120px;
     padding: 10px;
 }
 
