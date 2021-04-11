@@ -97,13 +97,10 @@ nav img {
     padding-left: 1.4rem;
 }
 
-/*to make the navbar sticky*/
+/*to make the navbar transparent*/
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #032039;
+.stickk {
+    background-color: transparent !important;
 }
 
 #navbarResponsive {
