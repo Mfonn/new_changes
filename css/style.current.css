@@ -270,10 +270,10 @@ p {
 .mb-4 {
     margin-top: 10px;
 }
-.btn {
+.orderbtn {
     transition-duration: 0.4s;
 }
-.btn:hover {
+.orderbtn:hover {
     background-color: #b36e08 !important;
     border: 2px solid #b36e08 !important;
 }
