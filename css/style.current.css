@@ -640,6 +640,12 @@ td.sorting_1::before {
     margin-left: 12px;
 }
 
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+    padding: 10px;
+}
+
+
 .p-c {
     padding: 0 !important;
 }
