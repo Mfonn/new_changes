@@ -642,10 +642,12 @@ td.sorting_1::before {
     margin-left: 12px;
 }
 
-.dropdown {
+.ml-auto, .mx-auto {
     margin-left: auto !important;
-    margin-top: 120px;
     padding: 10px;
+}
+ul.navbar-nav.ml-auto.drop {
+    margin-top: 120px;
 }
 
 
