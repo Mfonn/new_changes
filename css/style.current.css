@@ -81,7 +81,9 @@ nav img {
 .navbarpg {
     background-color: #032039 !important;
 }
-
+nav.navbar.navbar-expand-lg.navbar-dark.absolute-top.stick {
+    background-color: #032039;
+}
 .navbar-dark .navbar-nav .nav-link {
     color: #ffffff;
     font-size: 10px;
