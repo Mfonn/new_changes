@@ -664,6 +664,10 @@ ul.navbar-nav.ml-auto.drop {
     background-color: #faa61a;
 }
 
+.navbar_responsive a {
+    color: #faa61a;
+}
+
 .swapfx_w {
     margin: 95px 0;
     text-align: center;
