@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style.current.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>  
@@ -20,9 +19,9 @@
     <div class="subnav">
         <!-- container-fluid -->
 
-        <nav class="navbar navbar-expand-lg navbar-dark absolute-top navbarpg ">
+        <nav class="navbar navbar-expand-lg navbar-dark absolute-top navbarpg">
             <div class="container">
-                <a class="navbar-brand" href="dashboard.html">
+                <a class="navbar-brand" href="./">
                     <img src="./images/lg.png" class="slg" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,44 +30,84 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="dashboard.html">Panel</a>
+                            <a class="nav-link active" href="quicktrade.html">Quick Trade</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="transactions.html">My transactions</a>
+                            <a class="nav-link active" href="marketplace.html">Marketplace</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="my-details.html">My Details</a>
+                            <a class="nav-link active" href="home.html">My Account</a>
+                        </li>
+                        <li class="nav-item dropdown notifications-menu">
+                            <a class="nav-link active dropdown-toggle" href="wallet.html" id="walletMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Funds</a>
+                            <div class="dropdown-menu dropdown-menu-left dropdown" aria-labelledby="walletMenuLink">
+                                <a href="wallet.html" class="dropdown-item">Add Funds</a>
+                                <a href="withdraw.html" class="dropdown-item">Withdraw Funds</a>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item dropdown notifications-menu">
+                            <a class="nav-link active dropdown-toggle" href="orderHistory" id="orderMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{translator.headers.orders}}</a>
+                            <div class="dropdown-menu dropdown-menu-left dropdown" aria-labelledby="orderMenuLink">
+                                <a href="orderHistory" class="dropdown-item">All Orders</a>
+                                <a href="orderHistory/complete" class="dropdown-item">Completed Orders</a>
+                                <a href="orderHistory/active" class="dropdown-item">Active Orders</a>
+                                <a href="orderHistory/cancelled" class="dropdown-item">Cancelled Orders</a>
+                            </div>
+                        </li> -->
+                        <li class="nav-item dropdown notifications-menu">
+                            <a class="nav-link active dropdown-toggle" href="wallet" id="walletMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">History</a>
+                            <div class="dropdown-menu dropdown-menu-left dropdown" aria-labelledby="walletMenuLink">
+                                <a href="#" data-toggle="modal" data-target="#getWalletField" class="dropdown-item">Funds History</a>
+                                <a class="submenu dropdown-item dropdown-toggle" href="orderHistory" id="orderMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Order History</a>
+                                <div class="submenu dropdown-menu dropdown-menu-left dropdown" aria-labelledby="orderMenuLink">
+                                    <a href="orderHistory" class="dropdown-item">All Orders</a>
+                                    <a href="orderHistory/complete" class="dropdown-item">Completed Orders</a>
+                                    <a href="orderHistory/active" class="dropdown-item">Active Orders</a>
+                                    <a href="orderHistory/cancelled" class="dropdown-item">Cancelled Orders</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help">Help</a>
                         </li>
                     </ul>
-
+    
                     <span class="navbar-text">
-                    <ul class="nav">
-                        <li class="nav-item position-relative">
-                            <a href="#" class="mx-c2">
-                                <i class="far fa-bell x15"></i>
-                                <span class="noti">2</span>
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="settings.html" class="mx-c2"><i class="fas fa-cog x15"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="ml-c2">Logout</a>
-                    </li>
-
-                    <li>
-                        <a _ngcontent-uss-c7="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary-transparent dropdown-toggle">
-                            <span _ngcontent-uss-c7="" class="flag-icon flag-icon-ca flag-icon-squared"></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                            <a (click)="checkService.setLanguage(country.locale, country.code, country.language, country.locale)" class="dropdown-item" [routerLink]=""><span class="flag-icon flag-icon-{{country.code}} flag-icon-squared"></span>
-                                 <span  style="color: black;">&nbsp;&nbsp;{{country.title}}</span></a>
-                        </div>
-                    </li>
-                    </ul>
+                        <ul class="nav">
+                            <li class="nav-item position-relative">
+                                <a href="notifications" class="mx-c2">
+                                    <i class="far fa-bell x15"></i>
+                                    <span class="noti">2</span> 
+                                </a>
+                            </li>
+                            <div class="nav-item dropdown notifications-menu">
+                                <a class="btn btn-primary-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog x15"></i></a>
+    
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="profile"><span>Profile</span></a>
+                                    <a class="dropdown-item" href="profile/passwords"><span>Passwords</span></a>
+                                    <a class="dropdown-item" href="profile/documents"><span>Documents</span></a>
+                                    <a class="dropdown-item" href="profile/accounts"><span>Withdrawal Account</span></a>
+                                    <a class="dropdown-item" href="settings"><span>Settings</span></a>
+                                </div>
+                            </div>
+                            <li class="nav-item">
+                                <a  href="logout" class="ml-c2">Logout</a>
+                            </li>
+                            <div class="nav-item dropdown notifications-menu">
+                                <a class="btn btn-primary-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-ca flag-icon-squared"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" [routerLink]=""><span class="flag-icon flag-icon-ca flag-icon-squared"></span> <span>&nbsp;&nbsp;Canada</span></a>
+                                    <a class="dropdown-item" [routerLink]=""><span class="flag-icon flag-icon-ng flag-icon-squared"></span> <span>&nbsp;&nbsp;Nigeria</span></a>
+                                </div>
+                            </div>
+                        </ul>             
                     </span>
                 </div>
             </div>
+        </div>
         </nav>
     </div>
 
@@ -697,11 +736,14 @@
     </div>
         
 
-
-      <script src="js/fontawesome.js "></script>
-      <script src="js/jquery.min.js "></script>
-      <script src="js/bootstrap.min.js "></script>
-      <script src="js/newchange.js"></script> 
+    <script src="js/fontawesome.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+  
+       
 
  </body>     
 </html>
