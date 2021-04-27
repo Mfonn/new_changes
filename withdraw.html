@@ -4,458 +4,469 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="css/style.current.css">      
+    <link rel="stylesheet" href="css/style.current.css">
+    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>  
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="css/flag-icon-css/css/flag-icon.min.css">      
     <title>Swaps Fx - Dashboard</title>
 </head>
 <body class="bgboard">
-    <div class="subnav">
-        <!-- container-fluid -->
-    
-        <nav class="navbar navbar-expand-lg navbar-dark absolute-top navbarpg">
-            <div class="container">
-                <a class="navbar-brand" href="./">
-                    <img src="./images/lg.png" class="slg" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="quicktrade.html">Qu Trade</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="marketplace.html">Marketplace</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="home.html">My Account</a>
-                        </li>
-                        <li class="nav-item dropdown notifications-menu">
-                            <a class="nav-link active dropdown-toggle" href="wallet.html" id="walletMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Funds</a>
-                            <div class="dropdown-menu dropdown-menu-left dropdown" aria-labelledby="walletMenuLink">
-                                <a href="wallet.html" class="dropdown-item">Add Funds</a>
-                                <a href="withdraw.html" class="dropdown-item">Withdraw Funds</a>
-                            </div>
-                        </li>
-                        <!-- <li class="nav-item dropdown notifications-menu">
-                            <a class="nav-link active dropdown-toggle" href="orderHistory" id="orderMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{translator.headers.orders}}</a>
-                            <div class="dropdown-menu dropdown-menu-left dropdown" aria-labelledby="orderMenuLink">
-                                <a href="orderHistory" class="dropdown-item">All Orders</a>
-                                <a href="orderHistory/complete" class="dropdown-item">Completed Orders</a>
-                                <a href="orderHistory/active" class="dropdown-item">Active Orders</a>
-                                <a href="orderHistory/cancelled" class="dropdown-item">Cancelled Orders</a>
-                            </div>
-                        </li> -->
-                        <li class="nav-item dropdown notifications-menu">
-                            <a class="nav-link active dropdown-toggle" href="wallet" id="walletMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">History</a>
-                            <div class="dropdown-menu dropdown-menu-left dropdown" aria-labelledby="walletMenuLink">
-                                <a href="#" data-toggle="modal" data-target="#getWalletField" class="dropdown-item">Funds History</a>
-                                <a class="submenu dropdown-item dropdown-toggle" href="orderHistory" id="orderMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Order History</a>
-                                <div class="submenu dropdown-menu dropdown-menu-left dropdown" aria-labelledby="orderMenuLink">
+  
+  
+  
+  
+    <body class="bgboard">
+        <div class="subnav">
+            <!-- container-fluid -->
+        
+            <nav class="navbar navbar-expand-lg navbar-dark absolute-top navbarpg">
+                <div class="container">
+                    <a class="navbar-brand" href="./">
+                        <img src="./images/lg.png" class="slg" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="quicktrade.html">Quick Trade</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="marketplace.html">Marketplace</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="home.html">My Account</a>
+                            </li>
+                            <li class="nav-item dropdown notifications-menu">
+                                <a class="nav-link active dropdown-toggle" href="wallet.html" id="walletMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Funds</a>
+                                <div class="dropdown-menu dropdown-menu-left dropdown" aria-labelledby="walletMenuLink">
+                                    <a href="wallet.html" class="dropdown-item">Add Funds</a>
+                                    <a href="withdraw.html" class="dropdown-item">Withdraw Funds</a>
+                                </div>
+                            </li>
+                            <!-- <li class="nav-item dropdown notifications-menu">
+                                <a class="nav-link active dropdown-toggle" href="orderHistory" id="orderMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{translator.headers.orders}}</a>
+                                <div class="dropdown-menu dropdown-menu-left dropdown" aria-labelledby="orderMenuLink">
                                     <a href="orderHistory" class="dropdown-item">All Orders</a>
                                     <a href="orderHistory/complete" class="dropdown-item">Completed Orders</a>
                                     <a href="orderHistory/active" class="dropdown-item">Active Orders</a>
                                     <a href="orderHistory/cancelled" class="dropdown-item">Cancelled Orders</a>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="help">Help</a>
-                        </li>
-                    </ul>
-    
-                    <span class="navbar-text">
-                        <ul class="nav">
-                            <li class="nav-item position-relative">
-                                <a href="notifications" class="mx-c2">
-                                    <i class="far fa-bell x15"></i>
-                                    <span class="noti">2</span> 
-                                </a>
-                            </li>
-                            <div class="nav-item dropdown notifications-menu">
-                                <a class="btn btn-primary-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog x15"></i></a>
-    
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="profile"><span>Profile</span></a>
-                                    <a class="dropdown-item" href="profile/passwords"><span>Passwords</span></a>
-                                    <a class="dropdown-item" href="profile/documents"><span>Documents</span></a>
-                                    <a class="dropdown-item" href="profile/accounts"><span>Withdrawal Account</span></a>
-                                    <a class="dropdown-item" href="settings"><span>Settings</span></a>
-                                </div>
-                            </div>
-                            <li class="nav-item">
-                                <a  href="logout" class="ml-c2">Logout</a>
-                            </li>
-                            <div class="nav-item dropdown notifications-menu">
-                                <a class="btn btn-primary-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="flag-icon flag-icon-ca flag-icon-squared"></span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" [routerLink]=""><span class="flag-icon flag-icon-ca flag-icon-squared"></span> <span>&nbsp;&nbsp;Canada</span></a>
-                                    <a class="dropdown-item" [routerLink]=""><span class="flag-icon flag-icon-ng flag-icon-squared"></span> <span>&nbsp;&nbsp;Nigeria</span></a>
-                                </div>
-                            </div>
-                        </ul>             
-                    </span>
-                </div>
-            </div>
-        </div>
-        </nav>
-    
-        <div class="col-12 px-4">
-            <div class="navbar_responsive">
-            <div class="d-flex justify-content-between align-items-center mb-3 mobile">
-                <div class="p-2 text-center">
-                    <a href="#" type="button" data-toggle="collapse" data-target="#navbarResponsive"  aria-expanded="false">
-                        <div class="mmv"><i class="fa fa-bars x18"></i></div>
-                        <small>MENU</small>
-                    </a>
-                </div>
-                <div class="p-2"><img src="assets/images/lg.png" class="slg" alt=""></div>
-                <div class="p-2  position-relative">
-                    <a href="notifications">
-                        <i class="far fa-bell x15"></i>
-                        <span *ngIf='notificationCount > 0' class="noti">2</span> 
-                    </a>
-                </div>
-            </div>
-    
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto drop">
-                    <li class="nav-item">
-                        <a class="nav-link" href="quicktrade.html">Quick Trade</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="marketplace.html">Marketplace</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="ml-c2" href="marketplace">{{translator.headers.advanceTrade}}</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link active" href="home.html">My Account</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="wallet.html">Funds</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="wallet.html" class="ml-c2">Add Funds</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="withdraw.html" class="ml-c2">Withdraw Funds</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a href="wallet/cards" class="ml-c2">{{translator.wallet.page.cards}}</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a [routerLink]="" class="nav-link">History</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" data-toggle="modal" data-target="#getWalletField" class="ml-c2">Funds History</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="orderHistory" class="ml-c2">Order History</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="orderHistory/complete" class="ml-c2">Completed Orders</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="orderHistory/active" class="ml-c2">Active Orders</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="orderHistory/cancelled" class="ml-c2">Cancelled Orders</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile">Help</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile">Settings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="profile/passwords" class="ml-c2">Passwords</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="profile/documents" class="ml-c2">Documents</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="profile/accounts" class="ml-c2">Withdrawal Account</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="settings" class="ml-c2">Settings</a>
-                    </li>
-                    <li class="nav-item" *ngIf="auth == 0">
-                        <a class="nav-link" href="login">{{translator.headers.login}}</a>
-                    </li>
-                    <li class="nav-item" *ngIf="auth == 0">
-                        <a class="nav-link" href="signup">{{translator.headers.signup}}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logout">Logout</a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="swapfx-d">
-        <div class="container my-5 px-5c">
-    
-                <div class="row">
-                    <div class="col-lg-12 m-auto">
-    
-                        <div class="row">
-                            <div class="col-lg-7 add_funds">
-                                <div class="card mb-5" style="width: 100%;min-height: 1000px;">
-                                    <ul class="nav nav-tabs">
-                                        <li class="nav-item">
-                                          <a class="nav-link" href="wallet.html">Add Funds</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="">Withdraw Funds</a>
-                                        </li>
-                                    </ul>
-                                    
-                                    <div class="card-body mb-3">
-                                        <h5 class="card-title">Withdraw Funds</h5>
-    
-                                        <div class="alert alert-success">Success Message</div>
-                                        <div class="alert alert-danger">Error Message</div>
-                                        <p class="card-text">
-                                            Make withdrawals from your SwapsFx wallet, select the wallet currency, specify the amount and click on the 'Withdraw fund' button to get started
-                                        </p>
-                            
-                                        <div class="uline my-4"></div>
-                                        
-                                        <form>
-                                            <select name="wallet" id="wallet" required class="form-control form-control1 my-3">
-                                                <option value="" selected>Select Wallet</option>
-                                                <option>CAD</option>
-                                                <option>NGN</option>
-                                                <option>USD</option>
-                                                <option>GBP</option>
-                                            </select>
-                                            <span>
-                                                <select name="withdrawAccount" id="withdrawAccount" required class="form-control form-control1 my-3">
-                                                    <option value="" selected>Select Withdrawal Account</option>
-                                                    <option>Zenith Bank 1003766227</option>
-                                                </select>
-                                                <input type="number" step="0.01" name="withdralAmount" id="withdralAmount" placeholder="Amount" required class="form-control my-3" />
-    
-                                                <p class="card-text" *ngIf="showWithdrawTotal">
-                                                    Deposit Amount <span class="float-right colg">$0.00</span><br>
-                                                    Gateway Charge <span class="float-right colg">$0.00</span><br>
-                                                    Total Charge <span class="float-right colg">$0.00</span><br>
-                                                </p>
-                                                <input type="submit" value="Initialize Withdrawal" data-toggle="modal" data-target="#confirmSubmitWithdraw" class="btn btn_main3 my-2 orderbtn">
-                                            </span>
-                                         
-                                        </form>
+                            </li> -->
+                            <li class="nav-item dropdown notifications-menu">
+                                <a class="nav-link active dropdown-toggle" href="wallet" id="walletMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">History</a>
+                                <div class="dropdown-menu dropdown-menu-left dropdown" aria-labelledby="walletMenuLink">
+                                    <a href="#" data-toggle="modal" data-target="#getWalletField" class="dropdown-item">Funds History</a>
+                                    <a class="submenu dropdown-item dropdown-toggle" href="orderHistory" id="orderMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Order History</a>
+                                    <div class="submenu dropdown-menu dropdown-menu-left dropdown" aria-labelledby="orderMenuLink">
+                                        <a href="orderHistory" class="dropdown-item">All Orders</a>
+                                        <a href="orderHistory/complete" class="dropdown-item">Completed Orders</a>
+                                        <a href="orderHistory/active" class="dropdown-item">Active Orders</a>
+                                        <a href="orderHistory/cancelled" class="dropdown-item">Cancelled Orders</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-5 acctb"><div class="shadow p-3 mb-5 bg-white rounded">
-                                <h6 class="p-0">Account Balance</h6>
-                                <div class="recent">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item bgnu px-0 x13">
-                                            <div>
-                                                <b>Canadian Dollars ($)</b> 
-                                                <span class="float-right colg">CAD 163,288.98</span>
-                                            </div>
-                                            <small>Wallet balance in Canadian Dollars</small> 
-                                        </li>
-                                        <li class="list-group-item bgnu px-0 x13">
-                                            <div>
-                                                <b>Nigerian Naira (₦)</b> 
-                                                <span class="float-right colg">NGN 9,824,728.09</span>
-                                            </div>
-                                            <small>Wallet balance in Nigerian Naira</small> 
-                                        </li>
-                                        <li class="list-group-item bgnu px-0 x13">
-                                            <div>
-                                                <b>Canadian Dollars ($)</b> 
-                                                <span class="float-right colg">CAD 163,288.98</span>
-                                            </div>
-                                            <small>Wallet balance in Canadian Dollars</small> 
-                                        </li>
-                                        <li class="list-group-item bgnu px-0 x13">
-                                            <div>
-                                                <b>Nigerian Naira (₦)</b> 
-                                                <span class="float-right colg">NGN 9,824,728.09</span>
-                                            </div>
-                                            <small>Wallet balance in Nigerian Naira</small> 
-                                        </li>
-                                        <li class="list-group-item bgnu px-0 x13">
-                                            <div>
-                                                <b>Canadian Dollars ($)</b> 
-                                                <span class="float-right colg">CAD 163,288.98</span>
-                                            </div>
-                                            <small>Wallet balance in Canadian Dollars</small> 
-                                        </li>
-                                        <li class="list-group-item bgnu px-0 x13">
-                                            <div>
-                                                <b>Nigerian Naira (₦)</b> 
-                                                <span class="float-right colg">NGN 9,824,728.09</span>
-                                            </div>
-                                            <small>Wallet balance in Nigerian Naira</small> 
-                                        </li>
-                                    </ul>
-                                    <a class="float-left colg" href="wallet.html">Add Funds</a>
-                                    <a class="float-right colg" href="withdraw.html">Withdraw Funds</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="help">Help</a>
+                            </li>
+                        </ul>
+        
+                        <span class="navbar-text">
+                            <ul class="nav">
+                                <li class="nav-item position-relative">
+                                    <a href="notifications" class="mx-c2">
+                                        <i class="far fa-bell x15"></i>
+                                        <span class="noti">2</span> 
+                                    </a>
+                                </li>
+                                <div class="nav-item dropdown notifications-menu">
+                                    <a class="btn btn-primary-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog x15"></i></a>
+        
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="profile"><span>Profile</span></a>
+                                        <a class="dropdown-item" href="profile/passwords"><span>Passwords</span></a>
+                                        <a class="dropdown-item" href="profile/documents"><span>Documents</span></a>
+                                        <a class="dropdown-item" href="profile/accounts"><span>Withdrawal Account</span></a>
+                                        <a class="dropdown-item" href="settings"><span>Settings</span></a>
+                                    </div>
                                 </div>
-                                <div class="line my-3"></div>
+                                <li class="nav-item">
+                                    <a  href="logout" class="ml-c2">Logout</a>
+                                </li>
+                                <div class="nav-item dropdown notifications-menu">
+                                    <a class="btn btn-primary-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="flag-icon flag-icon-ca flag-icon-squared"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" [routerLink]=""><span class="flag-icon flag-icon-ca flag-icon-squared"></span> <span>&nbsp;&nbsp;Canada</span></a>
+                                        <a class="dropdown-item" [routerLink]=""><span class="flag-icon flag-icon-ng flag-icon-squared"></span> <span>&nbsp;&nbsp;Nigeria</span></a>
+                                    </div>
+                                </div>
+                            </ul>             
+                        </span>
+                    </div>
+                </div>
+            </div>
+            </nav>
+        
+            <div class="col-12 px-4">
+                <div class="navbar_responsive">
+                <div class="d-flex justify-content-between align-items-center mb-3 mobile">
+                    <div class="p-2 text-center">
+                        <a href="#" type="button" data-toggle="collapse" data-target="#navbarResponsive"  aria-expanded="false">
+                            <div class="mmv"><i class="fa fa-bars x18"></i></div>
+                            <small>MENU</small>
+                        </a>
+                    </div>
+                    <div class="p-2"><img src="assets/images/lg.png" class="slg" alt=""></div>
+                    <div class="p-2  position-relative">
+                        <a href="notifications">
+                            <i class="far fa-bell x15"></i>
+                            <span *ngIf='notificationCount > 0' class="noti">2</span> 
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto drop">
+                        <li class="nav-item">
+                            <a class="nav-link" href="quicktrade.html">Quick Trade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="marketplace.html">Marketplace</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="ml-c2" href="marketplace">{{translator.headers.advanceTrade}}</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="home.html">My Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="wallet.html">Funds</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="wallet.html" class="ml-c2">Add Funds</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="withdraw.html" class="ml-c2">Withdraw Funds</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="wallet/cards" class="ml-c2">{{translator.wallet.page.cards}}</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-toggle="modal" data-target="#getWalletField" class="ml-c2">Funds History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="orderHistory" class="ml-c2">Order History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="orderHistory/complete" class="ml-c2">Completed Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="orderHistory/active" class="ml-c2">Active Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="orderHistory/cancelled" class="ml-c2">Cancelled Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile">Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="profile/passwords" class="ml-c2">Passwords</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="profile/documents" class="ml-c2">Documents</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="profile/accounts" class="ml-c2">Withdrawal Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="settings" class="ml-c2">Settings</a>
+                        </li>
+                        <li class="nav-item" *ngIf="auth == 0">
+                            <a class="nav-link" href="login">{{translator.headers.login}}</a>
+                        </li>
+                        <li class="nav-item" *ngIf="auth == 0">
+                            <a class="nav-link" href="signup">{{translator.headers.signup}}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout">Logout</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="swapfx-d">
+            <div class="container my-5 px-5c">
+        
+                    <div class="row">
+                        <div class="col-lg-12 m-auto">
+        
+                            <div class="row">
+                                <div class="col-lg-7 add_funds">
+                                    <div class="card mb-5" style="width: 100%;min-height: 1000px;">
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="wallet.html">Add Funds</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="">Withdraw Funds</a>
+                                            </li>
+                                        </ul>
+                                        
+                                        <div class="card-body mb-3">
+                                            <h5 class="card-title">Withdraw Funds</h5>
+        
+                                            <div class="alert alert-success">Success Message</div>
+                                            <div class="alert alert-danger">Error Message</div>
+                                            <p class="card-text">
+                                                Make withdrawals from your SwapsFx wallet, select the wallet currency, specify the amount and click on the 'Withdraw fund' button to get started
+                                            </p>
+                                
+                                            <div class="uline my-4"></div>
+                                            
+                                            <form>
+                                                <select name="wallet" id="wallet" required class="form-control form-control1 my-3">
+                                                    <option value="" selected>Select Wallet</option>
+                                                    <option>CAD</option>
+                                                    <option>NGN</option>
+                                                    <option>USD</option>
+                                                    <option>GBP</option>
+                                                </select>
+                                                <span>
+                                                    <select name="withdrawAccount" id="withdrawAccount" required class="form-control form-control1 my-3">
+                                                        <option value="" selected>Select Withdrawal Account</option>
+                                                        <option>Zenith Bank 1003766227</option>
+                                                    </select>
+                                                    <input type="number" step="0.01" name="withdralAmount" id="withdralAmount" placeholder="Amount" required class="form-control my-3" />
+        
+                                                    <p class="card-text" *ngIf="showWithdrawTotal">
+                                                        Deposit Amount <span class="float-right colg">$0.00</span><br>
+                                                        Gateway Charge <span class="float-right colg">$0.00</span><br>
+                                                        Total Charge <span class="float-right colg">$0.00</span><br>
+                                                    </p>
+                                                    <input type="submit" value="Initialize Withdrawal" data-toggle="modal" data-target="#confirmSubmitWithdraw" class="btn btn_main3 my-2 orderbtn">
+                                                </span>
+                                             
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 acctb"><div class="shadow p-3 mb-5 bg-white rounded">
+                                    <h6 class="p-0">Account Balance</h6>
+                                    <div class="recent">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item bgnu px-0 x13">
+                                                <div>
+                                                    <b>Canadian Dollars ($)</b> 
+                                                    <span class="float-right colg">CAD 163,288.98</span>
+                                                </div>
+                                                <small>Wallet balance in Canadian Dollars</small> 
+                                            </li>
+                                            <li class="list-group-item bgnu px-0 x13">
+                                                <div>
+                                                    <b>Nigerian Naira (₦)</b> 
+                                                    <span class="float-right colg">NGN 9,824,728.09</span>
+                                                </div>
+                                                <small>Wallet balance in Nigerian Naira</small> 
+                                            </li>
+                                            <li class="list-group-item bgnu px-0 x13">
+                                                <div>
+                                                    <b>Canadian Dollars ($)</b> 
+                                                    <span class="float-right colg">CAD 163,288.98</span>
+                                                </div>
+                                                <small>Wallet balance in Canadian Dollars</small> 
+                                            </li>
+                                            <li class="list-group-item bgnu px-0 x13">
+                                                <div>
+                                                    <b>Nigerian Naira (₦)</b> 
+                                                    <span class="float-right colg">NGN 9,824,728.09</span>
+                                                </div>
+                                                <small>Wallet balance in Nigerian Naira</small> 
+                                            </li>
+                                            <li class="list-group-item bgnu px-0 x13">
+                                                <div>
+                                                    <b>Canadian Dollars ($)</b> 
+                                                    <span class="float-right colg">CAD 163,288.98</span>
+                                                </div>
+                                                <small>Wallet balance in Canadian Dollars</small> 
+                                            </li>
+                                            <li class="list-group-item bgnu px-0 x13">
+                                                <div>
+                                                    <b>Nigerian Naira (₦)</b> 
+                                                    <span class="float-right colg">NGN 9,824,728.09</span>
+                                                </div>
+                                                <small>Wallet balance in Nigerian Naira</small> 
+                                            </li>
+                                        </ul>
+                                        <a class="float-left colg" href="wallet.html">Add Funds</a>
+                                        <a class="float-right colg" href="withdraw.html">Withdraw Funds</a>
+                                    </div>
+                                    <div class="line my-3"></div>
+                                </div>
+                                </div> 
                             </div>
-                            </div> 
+        
+        
                         </div>
-    
-    
                     </div>
-                </div>
-    
-            </div>
-        </div>
-    </div>
-    
-    <div class="bgc">
-        <footer class="mt8">
-            <div class="container">
-                <div class="footer_smallscreen">
-                <div class="row footer">
-                    <div class="col-lg-2 col-md-2 col-sm-2">
-                        <img src="./images/logo1.png" class="img-fluid" alt="">
-                        <p class="xf12">
-                            We will get your money to your loved ones and business partners fast, conveniently, and securely in whatever currency you desire
-                        </p>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2">
-                        <h6>SwapFx</h6>
-    
-                        <a href="marketplace">Marketplace</a><br>
-                        <a href="quicktrade">Quick Trade</a><br>
-                        <a href="home">My Account</a><br>
-                        <a href="wallet">Funds</a><br>
-                        <a href="login">Login</a><br>
-                        <a href="signup">Sign Up</a><br>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2">
-                        <h6>Company</h6>
-                        <a href="about">About Us</a><br>
-                        <a href="contact">Contact Us</a><br>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2">
-                        <h6>Legal</h6>
-                        <a href="terms">Terms of Use</a><br>
-                        <a href="policy">Privacy Policy</a><br>
-                        <a href="agreement">User Agreement</a><br>
-                    </div>    
-                    <div class="col-lg-2 col-md-2 col-sm-2">
-                        <h6> Help and Support</h6>
-                        <a href="help">Help</a><br>
-                        <a href="faq">Frequently Asked uestions</a><br>
-                    </div>                    
-                    <div class="col-lg-2 col-md-2 col-sm-2">
-                        <h6>Follow Us</h6>
-                        <p>
-                            <a href="#" target="_blank"><i class="fab fa-facebook-square mr-2"></i></a>
-                            <a href="https://twitter.com/Swaps_Fx" target="_blank"><i class="fab fa-twitter mr-2"></i></a>
-                            <a href="https://www.instagram.com/Swaps_Fx" target="_blank"><i class="fab fa-instagram"></i></a>
-                        </p>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </footer>  
-            
-        <div class="container copyright">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p class="copy">©2021 SwapFx. All rights Reserved </p>
+        
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="modal fade" id="getWalletField" tabindex="-1" role="dialog" aria-labelledby="getWalletFieldLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="getWalletFieldLabel">Select Wallet</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
+        
+        <div class="bgc">
+            <footer class="mt8">
+                <div class="container">
+                    <div class="footer_smallscreen">
+                    <div class="row footer">
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <img src="./images/logo1.png" class="img-fluid" alt="">
+                            <p class="xf12">
+                                We will get your money to your loved ones and business partners fast, conveniently, and securely in whatever currency you desire
+                            </p>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <h6>SwapFx</h6>
+        
+                            <a href="marketplace">Marketplace</a><br>
+                            <a href="quicktrade">Quick Trade</a><br>
+                            <a href="home">My Account</a><br>
+                            <a href="wallet">Funds</a><br>
+                            <a href="login">Login</a><br>
+                            <a href="signup">Sign Up</a><br>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <h6>Company</h6>
+                            <a href="about">About Us</a><br>
+                            <a href="contact">Contact Us</a><br>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <h6>Legal</h6>
+                            <a href="terms">Terms of Use</a><br>
+                            <a href="policy">Privacy Policy</a><br>
+                            <a href="agreement">User Agreement</a><br>
+                        </div>    
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <h6> Help and Support</h6>
+                            <a href="help">Help</a><br>
+                            <a href="faq">Frequently Asked uestions</a><br>
+                        </div>                    
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <h6>Follow Us</h6>
+                            <p>
+                                <a href="#" target="_blank"><i class="fab fa-facebook-square mr-2"></i></a>
+                                <a href="https://twitter.com/Swaps_Fx" target="_blank"><i class="fab fa-twitter mr-2"></i></a>
+                                <a href="https://www.instagram.com/Swaps_Fx" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </footer>  
+                
+            <div class="container copyright">
                 <div class="row">
-                    <div class="card text-center mt-3 ml-2" id="card">
-                        <a href="/history/funds/CAD" class="yellow">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: #071c35;">CAD</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card text-center mt-3 ml-2" id="card">
-                        <a href="/history/funds/CAD" class="yellow">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: #071c35;">NGN</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card text-center mt-3 ml-2" id="card">
-                        <a href="/history/funds/CAD" class="yellow">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: #071c35;">USD</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card text-center mt-3 ml-2" id="card">
-                        <a href="/history/funds/CAD" class="yellow">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: #071c35;">GBP</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card text-center mt-3 ml-2" id="card">
-                        <a href="/history/funds/CAD" class="yellow">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: #071c35;">EUR</h5>
-                            </div>
-                        </a>
+                    <div class="col-lg-12 text-center">
+                        <p class="copy">©2021 SwapFx. All rights Reserved </p>
                     </div>
                 </div>
             </div>
-          </div>
         </div>
-    </div> 
-    <div class="modal fade" id="confirmSubmitWithdraw" tabindex="-1" role="dialog" aria-labelledby="confirmSubmitWithdrawLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <form [formGroup]="passwordForm">
+        
+        <div class="modal fade" id="getWalletField" tabindex="-1" role="dialog" aria-labelledby="getWalletFieldLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="confirmSubmitWithdrawLabel">Are you sure you want to continue?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <h5 class="modal-title" id="getWalletFieldLabel">Select Wallet</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                  </button>
                 </div>
                 <div class="modal-body">
-                    <div class="alert alert-danger">This is an error message</div>
-    
-                    Withdraw $600.00 Canadian Dollars from your Canadian Dollars wallet?<br><br>
-                    To complete this request, please enter your account password to continue
-                    <input type="password" name="password" id="password" required class="form-control my-3" placeholder="Password" />
+                    <div class="row">
+                        <div class="card text-center mt-3 ml-2" id="card">
+                            <a href="/history/funds/CAD" class="yellow">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #071c35;">CAD</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card text-center mt-3 ml-2" id="card">
+                            <a href="/history/funds/CAD" class="yellow">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #071c35;">NGN</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card text-center mt-3 ml-2" id="card">
+                            <a href="/history/funds/CAD" class="yellow">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #071c35;">USD</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card text-center mt-3 ml-2" id="card">
+                            <a href="/history/funds/CAD" class="yellow">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #071c35;">GBP</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card text-center mt-3 ml-2" id="card">
+                            <a href="/history/funds/CAD" class="yellow">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #071c35;">EUR</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn_main3">Confirm Withdrawal</button>
-                </div>
-            </form>
-          </div>
+              </div>
+            </div>
+        </div> 
+        <div class="modal fade" id="confirmSubmitWithdraw" tabindex="-1" role="dialog" aria-labelledby="confirmSubmitWithdrawLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <form [formGroup]="passwordForm">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="confirmSubmitWithdrawLabel">Are you sure you want to continue?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-danger">This is an error message</div>
+        
+                        Withdraw $600.00 Canadian Dollars from your Canadian Dollars wallet?<br><br>
+                        To complete this request, please enter your account password to continue
+                        <input type="password" name="password" id="password" required class="form-control my-3" placeholder="Password" />
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn_main3">Confirm Withdrawal</button>
+                    </div>
+                </form>
+              </div>
+            </div>
         </div>
-    </div>
-
-      <script src="js/fontawesome.js"></script>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>    
-      <script src="js/newchange.js"></script> 
-</body>
+    
+    <script src="js/fontawesome.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>  
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+   
+</body> 
 </html>
