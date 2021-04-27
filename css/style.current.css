@@ -49,6 +49,8 @@ nav img {
 .dropdown-menu.show {
     transform: translate3d(0px, 62px, 0px) !important;
     width: 100%;
+    margin-top: -66px;
+    background-color: #032039;
 }
 
 .custom-select {
@@ -70,7 +72,6 @@ nav img {
 }
 
 .navbar {
-    overflow: hidden;
     padding: 0.5rem 1rem;
     background-color: transparent;
     position: fixed;
@@ -109,9 +110,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.absolute-top.stick {
     background-color: #032039;
 }
 
-#navbarResponsive a {
-    color: #fff;
-}
+
 i.fa.fa-bars.x18 {
     padding-bottom: 10px;
 }
@@ -560,6 +559,7 @@ p {
     color: #797979;
 }
 
+
 .recent a {
     font-size: 12px;
     text-decoration: none;
@@ -668,7 +668,9 @@ ul.navbar-nav.ml-auto.drop {
 .navbar_responsive a {
     color: #faa61a;
 }
-
+#navbarResponsive a {
+    color: #fff;
+}
 .swapfx_w {
     margin: 95px 0;
     text-align: center;
@@ -1105,6 +1107,7 @@ footer a:hover {
     margin-bottom: -80px !important;
     padding-left: 10px;
     padding-right: 10px;
+    
 }
 .table_market {
     font-size: 12px !important;
@@ -1246,6 +1249,9 @@ footer a:hover {
     .noti {
         top: 3px;
         left: 15px;
+    }
+    i.far.fa-bell.x15 {
+        color: #FAA61A;
     }
     .btn_main {
         width: 106px;
