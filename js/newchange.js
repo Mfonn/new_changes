@@ -14,16 +14,5 @@ $(document).ready(function() {
 })
 
 
-//for responsive datatables 
-$(document).ready(function() {
-    var table = $('.mydatatable').DataTable( {
-        pageLength: 5,
-        rowReorder: {
-            selector: 'td:nth-child(2)'
-        },
-        responsive: true,
-        searching: false,
-        ordering: false,
-    } );
-} );
+
 
